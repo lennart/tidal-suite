@@ -1,0 +1,11 @@
+import Sound.Tidal.MIDI.Context
+ds <- midiDevices
+-- replace string with your MIDI output name
+(m1,x1) <- midiSetters ds "DSI Tetra MIDI 1" 1 synthController getNow
+
+-- modulate at higher frequency than notes are played
+m1 $ whenmod 5 2 (overlay (modwheel ((sin <$>) $ run 12))) $
+  slowspread slow [3,2] $ n "a e f g" # unit "cycle"
+
+-- switching through preset of my device...
+m1 silence

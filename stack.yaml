@@ -1,0 +1,36 @@
+flags: {}
+extra-package-dbs: []
+packages:
+- '.'
+- location:
+    # git: file:///home/<your-user>/Tidal
+    git: https://github.com/tidalcycles/Tidal
+    commit: ebe4f56fddaf4d8657c60b72ce19a3f1262a1d84
+- location:
+    # git: file:///home/<your-user>/tidal-midi
+    git: https://github.com/lennart/tidal-midi
+    commit: 93f75fdd6bc9444952e4b7347bff10cc17c607f1
+system-ghc: false
+extra-deps:
+- PortMidi-0.1.6.0
+- SHA-1.6.4.2
+- attoparsec-0.13.0.2
+- base64-bytestring-1.0.0.1
+- blaze-builder-0.4.0.2
+- case-insensitive-1.2.0.7
+- colour-2.3.3
+- data-binary-ieee754-0.4.4
+- entropy-0.3.7
+- hashable-1.2.4.0
+- hosc-0.15
+- mersenne-random-pure64-0.2.2.0
+- mtl-2.2.1
+- network-2.6.3.1
+- parsec-3.1.11
+- primitive-0.6.1.0
+- random-1.1
+- scientific-0.3.4.9
+- text-1.2.2.1
+- vector-0.11.0.0
+- websockets-0.9.7.0
+resolver: ghc-8.0.1
